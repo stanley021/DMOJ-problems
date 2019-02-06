@@ -1,0 +1,32 @@
+x = 0
+n = 0
+total_let =0
+
+useable = False
+must_have = ["I", "O", "S", "H", "Z", "X", "N"]
+
+user_input = (input().upper())
+length = len(user_input)
+letters = list(user_input)
+
+for x in range(length):
+    for n in range(7):
+
+
+        if letters[x] != must_have[n]:
+            n += 1
+
+        elif letters[x] == must_have[n]:
+            total_let += 1
+
+if total_let == length:
+    useable = True
+
+if useable == True:
+    print("YES")
+else:
+    print("NO")
+
+
+
+
