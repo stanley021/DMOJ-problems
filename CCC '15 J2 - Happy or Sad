@@ -1,0 +1,40 @@
+line = input()
+sad = 0
+happy = 0
+length = 0
+
+amount = 0
+
+for n in line:
+  amount += 1
+
+  for x in line:
+    if x == ":":
+      length = amount + 2
+  
+    if line[amount:length] == "-(":
+      sad += 1
+  
+    elif line[amount:length] == "-)":
+      happy += 1
+    
+    elif line[amount:length] != "-)" or line[amount:length] != "-(":
+      nothing = 1
+
+      
+
+
+
+
+
+if happy > sad:
+  print ("happy")
+  
+elif happy == sad and happy > 0:
+  print("unsure")
+
+elif sad > happy:
+  print("sad")
+
+else:
+  print ("none")
